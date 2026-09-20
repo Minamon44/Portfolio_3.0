@@ -1,0 +1,13 @@
+# deps
+node_modules/
+Website/node_modules/
+
+# Next.js
+Website/.next/
+Website/out/
+
+# misc
+.DS_Store
+*.env
+*.env.local
+.vercel

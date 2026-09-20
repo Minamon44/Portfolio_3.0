@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "@fontsource-variable/jetbrains-mono";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+@theme {
+  /* === DARK TERMINAL PALETTE === */
+  --color-bg:            #020617;
+  --color-bg-card:       #0E1223;
+  --color-bg-elevated:   #0A0F1E;
+  --color-border:        #1E293B;
+  --color-border-strong: #334155;
+
+  --color-fg:            #F8FAFC;
+  --color-fg-muted:      #94A3B8;
+  --color-fg-dim:        #475569;
+
+  --color-green:         #22C55E;
+  --color-green-dim:     #15803D;
+  --color-blue:          #38BDF8;
+  --color-amber:         #F59E0B;
+
+  /* Typography */
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --spacing-section: 96px;
+
+  /* Breakpoints */
+  --breakpoint-desk: 1024px;
+  --breakpoint-tab:  768px;
+  --breakpoint-mob:  640px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 56px;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono { font-family: var(--font-mono); }
+
+:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border-strong); border-radius: 3px; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.link-slide {
+  position: relative;
+  text-decoration: none;
+}
+.link-slide::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -1px;
+  width: 0; height: 1px;
+  background: var(--color-green);
+  transition: width 0.2s ease;
+}
+.link-slide:hover::after { width: 100%; }
