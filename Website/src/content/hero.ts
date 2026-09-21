@@ -9,7 +9,7 @@ export const hero: HeroData = {
     "End-to-end ML pipelines, multi-agent risk scoring, and LLM tooling — built for production, not notebooks. Pharmaceutical supply chains, predictive ML, freelance automation.",
   location: "Cairo, Egypt",
   status: "open to AI & Data Science roles — class of 2027",
-  photo: "https://minamon44.github.io/mina.jpg",
+  photo: "/mina.jpg",
   ctaLabel: "./projects",
   ctaHref: "#projects",
   stats: [
